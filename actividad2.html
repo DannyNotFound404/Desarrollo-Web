@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 150px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="date"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: calc(100% - 20px);
+            padding: 8px 10px;
+            margin: 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="checkbox"],
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .note {
+            color: red;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+        .form-subtitle {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="https://servicios.registromercantil.gob.gt/formatosolicitudes/assets/logo-rm-wide-sm-2.png" alt="Registro Mercantil">
+            <h2>Este formato de solicitud es GRATUITO, PROHIBIDO su venta.</h2>
+            <h3>SOLICITUD DE INSCRIPCIÓN DE COMERCIANTE INDIVIDUAL Y EMPRESA</h3>
+        </div>
+        <form action="submit_form.php" method="post">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="primer_nombre">Primer Nombre:</label>
+                    <input type="text" id="primer_nombre" name="primer_nombre">
+                </div>
+                <div class="form-group">
+                    <label for="segundo_nombre">Segundo Nombre:</label>
+                    <input type="text" id="segundo_nombre" name="segundo_nombre">
+                </div>
+                <div class="form-group">
+                    <label for="otro_nombre">Otro Nombre:</label>
+                    <input type="text" id="otro_nombre" name="otro_nombre">
+                </div>
+                <div class="form-group">
+                    <label for="primer_apellido">Primer Apellido:</label>
+                    <input type="text" id="primer_apellido" name="primer_apellido">
+                </div>
+                <div class="form-group">
+                    <label for="segundo_apellido">Segundo Apellido:</label>
+                    <input type="text" id="segundo_apellido" name="segundo_apellido">
+                </div>
+                <div class="form-group">
+                    <label for="apellido_casada">Apellido Casada:</label>
+                    <input type="text" id="apellido_casada" name="apellido_casada">
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad">
+                </div>
+                <div class="form-group">
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo">
+                        <option value="">Seleccione una opción</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidad">Nacionalidad:</label>
+                    <input type="text" id="nacionalidad" name="nacionalidad">
+                </div>
+                <div class="form-group">
+                    <label for="profesion">Profesión u Oficio:</label>
+                    <input type="text" id="profesion" name="profesion">
+                </div>
+                <div class="form-group">
+                    <label for="domicilio">Con domicilio en el Departamento de:</label>
+                    <input type="text" id="domicilio" name="domicilio">
+                </div>
+                <div class="form-group">
+                    <label for="residencia">Con Residencia en:</label>
+                    <input type="text" id="residencia" name="residencia">
+                </div>
+                <div class="form-group">
+                    <label>Documento de Identificación:</label>
+                    <label>
+                        <input type="radio" name="identificacion" value="dpi"> Documento Personal de Identificación (DPI)
+                    </label>
+                    <label>
+                        <input type="radio" name="identificacion" value="pasaporte"> Pasaporte
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="nit">NIT:</label>
+                    <input type="text" id="nit" name="nit">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">No. de Teléfono y/o Celular:</label>
+                    <input type="text" id="telefono" name="telefono">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="solicito">Solicito:</label>
+                    <label>
+                        <input type="checkbox" name="solicitud" value="comerciante_individual"> Que se me inscriba como comerciante individual
+                    </label>
+                    <label>
+                        <input type="checkbox" name="solicitud" value="empresa_propia"> Que se inscriba la siguiente empresa de mi propiedad o Propiedad de:
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="nombre_comercial">Nombre Comercial:</label>
+                    <input type="text" id="nombre_comercial" name="nombre_comercial">
+                </div>
+                <div class="form-group">
+                    <label for="direccion_completa">Dirección Completa:</label>
+                    <input type="text" id="direccion_completa" name="direccion_completa">
+                </div>
+                <div class="form-group">
+                    <label for="objeto">Objeto:</label>
+                    <input type="text" id="objeto" name="objeto">
+                </div>
+                <div class="form-group">
+                    <label for="fecha_inicio">Fecha de inicio de actividades:</label>
+                    <input type="text" id="fecha_inicio" name="fecha_inicio" placeholder="dd/mm/aaaa">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="al_inscribirse"> al inscribirse
+                    </label>
+                    <label>
+                        <input type="checkbox" name="capital"> Capital: Q.
+                    </label>
+                    <input type="text" name="capital_valor" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="unica">Única</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sucursal">Sucursal</label>
+                    <input type="checkbox" id="sucursal" name="sucursal">
+                </div>
+                <div class="form-group">
+                    <label for="administrador">Administrador, Gerente o Factor:</label>
+                    <input type="text" id="administrador" name="administrador">
+                </div>
+                <div class="form-group">
+                    <label for="regimen_matrimonial">1) Si es casado, indique el régimen matrimonial:</label>
+                    <input type="text" id="regimen_matrimonial" name="regimen_matrimonial">
+                </div>
+                <div class="form-group">
+                    <label for="firmante">2) Si hay un firmante autorizado, indique el nombre del firmante:</label>
+                    <input type="text" id="firmante" name="firmante">
+                </div>
+                <div class="form-group">
+                    <label for="apellido_firmante">Apellido del firmante:</label>
+                    <input type="text" id="apellido_firmante" name="apellido_firmante">
+                </div>
+                <div class="form-group">
+                    <label for="dpi_firmante">Número de DPI del firmante:</label>
+                    <input type="text" id="dpi_firmante" name="dpi_firmante">
+                </div>
+                <div class="form-group">
+                    <label for="direccion_firmante">Dirección del firmante:</label>
+                    <input type="text" id="direccion_firmante" name="direccion_firmante">
+                </div>
+                <div class="form-group">
+                    <label for="correo_firmante">Correo electrónico del firmante:</label>
+                    <input type="email" id="correo_firmante" name="correo_firmante">
+                </div>
+                <div class="form-group">
+                    <label for="telefono_firmante">Teléfono del firmante:</label>
+                    <input type="text" id="telefono_firmante" name="telefono_firmante">
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="text" id="fecha" name="fecha" placeholder="dd/mm/aaaa">
+                </div>
+                <div class="form-group">
+                    <label for="localidad">Localidad:</label>
+                    <input type="text" id="localidad" name="localidad">
+                </div>
+                <div class="form-group">
+                    <label for="firma">Firma:</label>
+                    <input type="text" id="firma" name="firma">
+                </div>
+                <div class="form-group">
+                    <label for="firma_sello">Firma y sello del registrador:</label>
+                    <input type="text" id="firma_sello" name="firma_sello">
+                </div>
+                <div class="form-group">
+                    <label for="notas">Notas:</label>
+                    <textarea id="notas" name="notas" rows="4"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
